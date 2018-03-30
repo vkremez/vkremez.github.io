@@ -35,6 +35,6 @@ void create_process(char* path_to_exe)
 		//printf("[*] We are in the debug mode: %s\n", debugger_active);
 		return;
 	}
-	```
+	
  ``` 
 sdsadsa
