@@ -2,7 +2,8 @@
 C++ reusuables:
 
 1. Create_Process function
-```
+<pre>
+  <code class="c++">
 void create_process(char* path_to_exe)
 	{
 		STARTUPINFO si;
@@ -34,8 +35,8 @@ void create_process(char* path_to_exe)
 		//printf("[*] We are in the debug mode: %s\n", debugger_active);
 		return;
 	}
-	
- ``` 
+  </code>
+</pre>
 2. Open Process function
 ```
 HANDLE open_process(int PID)
