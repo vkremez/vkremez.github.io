@@ -2,7 +2,9 @@
 C++ reusuables:
 
 1. Create Process 
-```void create_process(char* path_to_exe)
+```
+
+void create_process(char* path_to_exe)
 	{
 		STARTUPINFO si;
 		PROCESS_INFORMATION pi;
