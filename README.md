@@ -32,5 +32,5 @@ C++ reusuables:
 		bool debugger_active = true;
 		//printf("[*] We are in the debug mode: %s\n", debugger_active);
 		return;
-	}```
+	}
   
