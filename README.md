@@ -2,7 +2,7 @@
 C++ reusuables:
 
 1. Create Process 
-```void create_process(char* path_to_exe)
+`void create_process(char* path_to_exe)
 	{
 		STARTUPINFO si;
 		PROCESS_INFORMATION pi;
@@ -32,6 +32,6 @@ C++ reusuables:
 		bool debugger_active = true;
 		//printf("[*] We are in the debug mode: %s\n", debugger_active);
 		return;
-	}
+	}`
   
 sdsadsa
