@@ -50,7 +50,7 @@ HANDLE open_process(int PID)
 </pre>
 III. Open Thread function
 <pre>
-  <code class="c++">
+<code class="c++">
 HANDLE open_thread(int thread_id)
 	{
 		printf("[*] Enter open_thread() function...\n");
@@ -61,7 +61,7 @@ HANDLE open_thread(int thread_id)
 </pre>
 IV. Enumerate threads
 <pre>
-  <code class="c++">
+<code class="c++">
   std::vector<DWORD> enumerate_threads(void)
 	{
 		std::vector<DWORD> mylist;
@@ -85,11 +85,11 @@ IV. Enumerate threads
 		CloseHandle(snapshot);
 		return mylist;
 	}	
- 	</code>
+ </code>
 </pre>
 V. Get Thread Context function
 <pre>
-  <code class="c++">
+<code class="c++">
 	CONTEXT get_thread_context(int thread_id, HANDLE h_thread)
 	{
 		printf("[*] Enter get_thread_context() function...\n");
@@ -99,11 +99,11 @@ V. Get Thread Context function
 		GetThreadContext(h_thread, &context);
 		return context;
 	}
- 	</code>
+</code>
 </pre>
 VI. Obtain raw resource function
 <pre>
-  <code class="c++">
+ <code class="c++">
 BYTE* get_raw_payload(OUT SIZE_T &res_size)
 {
     HMODULE hInstance = GetModuleHandle(NULL);
@@ -122,6 +122,6 @@ BYTE* get_raw_payload(OUT SIZE_T &res_size)
     FreeResource(res_handle);
     return out_buf;
 }
- 	</code>
+ </code>
 </pre>
 VII. 
