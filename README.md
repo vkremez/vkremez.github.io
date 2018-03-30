@@ -38,6 +38,8 @@ void create_process(char* path_to_exe)
   </code>
 </pre>
 2. Open Process function
+<pre>
+  <code class="c++">
 HANDLE open_process(int PID)
 	{
 		printf("[*] Enter open_process() function...\n");
