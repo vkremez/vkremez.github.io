@@ -1,9 +1,8 @@
 # VK Simple Debugger
 C++ reusuables:
 
-1. Create Process 
+1. Create_Process function
 ```
-
 void create_process(char* path_to_exe)
 	{
 		STARTUPINFO si;
@@ -18,7 +17,7 @@ void create_process(char* path_to_exe)
 			NULL,
 			NULL,
 			NULL,
-			DEBUG_PROCESS,
+			DEBUG_PROCESS, //CREATE_SUSPENDED
 			NULL,
 			NULL,
 			&si,
@@ -37,4 +36,13 @@ void create_process(char* path_to_exe)
 	}
 	
  ``` 
-sdsadsa
+2. Open Process function
+```
+HANDLE open_process(int PID)
+	{
+		printf("[*] Enter open_process() function...\n");
+		dwProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, PID);
+		return dwProcess;
+	}
+```
+3.
