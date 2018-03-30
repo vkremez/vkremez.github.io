@@ -38,14 +38,22 @@ void create_process(char* path_to_exe)
   </code>
 </pre>
 2. Open Process function
-```
 HANDLE open_process(int PID)
 	{
 		printf("[*] Enter open_process() function...\n");
 		dwProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, PID);
 		return dwProcess;
 	}
-```
-3.
-<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1</pre></td><td><pre style="margin: 0; line-height: 125%">print &#39;hello world!&#39;
-</pre></td></tr></table></div>
+ </code>
+</pre>
+3. Open Thread
+<pre>
+  <code class="c++">
+HANDLE open_thread(int thread_id)
+	{
+		printf("[*] Enter open_thread() function...\n");
+		HANDLE dwThread = OpenProcess(THREAD_ALL_ACCESS, FALSE, thread_id);
+		return dwThread;
+	}
+ </code>
+</pre>
